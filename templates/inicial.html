@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editor Multimídia</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/inicial.css') }}">
+</head>
+<body>
+  <!-- Plano de fundo animado -->
+  <div id="particles-js"></div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <button class="menu-button">☰</button>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <li><a></a></li>
+      <li><a href="{{ url_for('editor_imagem') }}">Editor de Imagem</a></li>
+      <li><a href="#">Editor de Vídeo</a></li>
+      <li><a href="#">Editor de Áudio</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="intro">
+      <h1>Seja Bem-vindo ao Editor Galaxili</h1>
+      <p class="intro-text">Esse editor multimídia tem como principal função em auxíliar na edição de imagens, vídeos e audios como um todo, sem a necessidade de uma assinatura</p>
+      <p></p>
+      <p class="intro-text">Abaixo está um pequeno tuor da página inicial para te auxiliar em sua jornada pelo editor</p>
+
+      <div class="screenshots1">
+        <p></p>
+        <img src="{{ url_for('static', filename='images/TelaInicial.png') }}" alt="Exemplo de edição 1">
+        <p></p>
+        <p class="tutorial-texto">Como pode ver, a única função dessa página é te dar uma breve explicação, sua única opção para clicar está marcada na imagem acima por uma <span style="color: #ff0000;">Seta</span>, Lá está a barra lateral com tudo que irá precisar, abaixo está uma explicação de o que você poderá fazer nessa barra lateral</p>
+      </div>
+
+      <div class="screenshots2">
+        <img src="{{ url_for('static', filename='images/Editores.png') }}" alt="Exemplo de edição 2">
+        <p></p>
+        <p class="tutorial-texto">Como pode ver na imagem acima, a barra lateral possuí 3 opções, sendo elas:</p>
+        <p></p>
+        <p class="tutorial-texto">Editor de Imagem: Página especializada para modificação de uma imagem</p>
+        <p class="tutorial-texto">Editor de Video: Página especializada para modificações de um video mp4</p>
+        <p class="tutorial-texto">Editor de Áudio: Página especializada para modificações de um audio mp3</p>
+        <p></p>
+        <p class="tutorial-texto">Você poderá navegar por elas livremente e fazer quantas edições quiser sem a necessidade de uma assinatura ou algum tipo de pagamento</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Editor Multimídia. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts do fundo animado -->
+  <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+  <script>
+    particlesJS.load('particles-js', '{{ url_for("static", filename="js/particles-config.json") }}');
+
+    document.querySelector('.menu-button').addEventListener('click', function () {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    });
+    
+  </script>
+</body>
+</html>

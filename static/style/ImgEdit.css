@@ -1,0 +1,139 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+  }
+  
+  /* Cabeçalho */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #00000a, #00000e);
+    display: flex;
+    justify-content: flex-start; /* botão à esquerda */
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(24, 24, 24, 0.664);
+  }
+  
+  /* Botão do menu */
+  .menu-button {
+    font-size: 1.5rem;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Sidebar */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 999;
+  }
+  
+  #sidebar.active {
+    left: 0;
+  }
+  
+  #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #sidebar ul li {
+    padding: 15px 20px;
+  }
+  
+  #sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Conteúdo principal */
+  main {
+    flex: 1;
+    padding: 100px 20px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Demais estilos permanecem os mesmos */
+  .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #002255;
+  }
+
+/* Alinha à esquerda o restante dos textos */
+  .intro p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  screenshots1 img {
+    width: 950px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+
+/* Texto abaixo da primeira imagem */
+  .tutorial-texto {
+    margin-top: 0.5rem;
+    margin-left: 10px;
+    max-width: 1000px;
+    align-self: flex-start;
+  }
+
+  .screenshots1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#080808;
+    border-radius: 30px;
+  }
+
+  #particles-js {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00000a, #000020); /* Azul escuro → roxo */
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  footer {
+    background-color: #080808;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+  }
